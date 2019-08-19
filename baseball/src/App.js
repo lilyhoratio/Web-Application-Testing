@@ -3,23 +3,14 @@ import Display from "./components/Display";
 import Dashboard from "./components/Dashboard";
 import "./App.css";
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      balls: 0,
-      strikes: 0
-    };
-  }
+function App() {
 
-  render() {
-    return (
-      <div className="App">
-        <Display balls={this.state.balls} strikes={this.state.strikes} />
-        <Dashboard balls={this.state.balls} strikes={this.state.strikes} />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Display balls={3} strikes={2} />
+      <Dashboard strike={() => console.log('strike!!!')} />
+    </div >
+  );
 }
 
 export default App;

@@ -1,12 +1,14 @@
+
 import React from "react";
 
-function Dashboard() {
+const Dashboard = (props) => {
   return (
     <div className="dashboard">
-      <button>strike</button>
-      <button>ball</button>
-      <button>foul</button>
-      <button>hit</button>
+      {/* for each button, trigger a function onClick */}
+      <button onClick={props.strike}>strike</button>
+      <button onClick={props.ball}>ball</button>
+      <button onClick={props.foul}>foul</button>
+      <button onClick={props.hit}>hit</button>
     </div>
   );
 }
