@@ -6,11 +6,9 @@ describe("<Display />", () => {
     it('renders without crashing', () => {
         render(<Display />)
     })
-
     it('props are passed and working', () => {
         // render() - renders a React element into the DOM and returns utility methods for testing that component
         const display = render(<Display strikes={2} balls={3} />)
-        //find component that has 
         display.getByText(/Strike Count: 2/)
         display.getByText(/Ball Count: 3/)
     })
