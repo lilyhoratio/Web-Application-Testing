@@ -56,4 +56,18 @@ describe("<App />", () => {
     expect(strikeCount).toHaveTextContent(/0$/)
     expect(ballCount).toHaveTextContent(/0$/)
   })
+
+  it("foul - doesn't increase strikes past 2", () => {
+    fireEvent.click(foul)
+    fireEvent.click(foul)
+    fireEvent.click(foul)
+    expect(strikeCount).toHaveTextContent(/2$/)
+  })
+  it("hit - resets count of both strikes and balls", () => {
+    fireEvent.click(ball)
+    fireEvent.click(strike)
+    fireEvent.click(hit)
+    expect(strikeCount).toHaveTextContent(/0$/)
+    expect(ballCount).toHaveTextContent(/0$/)
+  })
 })
