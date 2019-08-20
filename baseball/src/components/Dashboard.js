@@ -2,6 +2,7 @@
 import React from "react";
 
 const Dashboard = (props) => {
+  console.log("dashboard", props)
   return (
     <div className="dashboard">
       {/* for each button, trigger a function onClick */}
